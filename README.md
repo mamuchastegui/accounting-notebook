@@ -10,7 +10,7 @@ For building and running the application you need:
 
 ## Running the application locally
 
-To run this application execute `java -jar testtask/build/libs/testtask-0.0.1-SNAPSHOT.jar` from root.
+To run this application execute `java -jar jar/testtask-0.0.1-SNAPSHOT.jar` from root.
 After that you can create some transactions with next cURL's.
 
 ## Postman
