@@ -1,0 +1,19 @@
+<h3 *ngIf="transactions.length < 1">There's no transactions yet.</h3>
+<ngb-accordion>
+  <ngb-panel *ngFor="let transaction of transactions"
+             title="{{transaction.type | titlecase}} - $ {{transaction.amount}}"
+             id="accordion-panel-{{transaction.id}}">
+    <ng-template ngbPanelContent>
+      <h3>Transaction Detail</h3>
+      <strong>ID:</strong> {{transaction.id}}
+      <hr class="mt-1 mb-1">
+      <strong>Type:</strong> {{transaction.type | titlecase}}
+      <hr class="mt-1 mb-1">
+      <strong>Amount:</strong> $ {{transaction.amount}}
+      <hr class="mt-1 mb-1">
+      <strong>Date:</strong> {{transaction.effectiveDate | date: 'dd/MM/yyyy hh:mm a' }}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+
